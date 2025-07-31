@@ -1,0 +1,210 @@
+/* General Contact Container */
+.contact-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #333, #4d4d4d); /* Grey gradient background */
+    color: #e0e0e0;
+    font-family: 'Quattrocento', serif;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Floating Animation Effect */
+.contact-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(128, 128, 128, 0.3), transparent);
+    animation: rotateGradient 10s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Header */
+.contact-container h1 {
+    font-size: 3rem;
+    color: #FFB84D;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Form */
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.05); /* Subtle semi-transparent form background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #e0e0e0; /* Grey labels */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(192, 192, 192, 0.6);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #2a2a2a;
+    color: #cccccc;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.8); /* Highlight on focus */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888888;
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+}
+
+/* Submit Button */
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    background: linear-gradient(90deg, #4d4d4d, #1a1a1a); /* Grey gradient button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #1a1a1a, #4d4d4d);
+    box-shadow: 0 4px 15px rgba(128, 128, 128, 0.7); /* Glow on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.contact-form button[type="submit"]:active {
+    transform: translateY(0); /* Reset position on click */
+    background: linear-gradient(90deg, #1a1a1a, #0f0f0f); /* Darker gradient on active */
+}
+
+/* Error and Success Messages */
+.error {
+    color: #ff4d4f; /* Keep red for errors */
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.success {
+    color: #4caf50; /* Keep green for success */
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-container p {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form button[type="submit"] {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container h1 {
+        font-size: 2rem;
+    }
+
+    .contact-container p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+
+    .contact-form button[type="submit"] {
+        font-size: 0.9rem;
+    }
+}

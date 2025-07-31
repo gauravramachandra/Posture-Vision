@@ -1,0 +1,369 @@
+body {
+    font-family: 'Quattrocento', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.triangle-logo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.triangle-logo::before,
+.triangle-logo::after,
+.triangle-logo .dot {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.triangle-logo::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.triangle-logo::after {
+    bottom: 0;
+    left: 0;
+}
+
+.triangle-logo .dot {
+    bottom: 0;
+    right: 0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    color: #00cc66;
+    transform: scale(1.1);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    margin-top: -30px;
+}
+
+.hero-section .content {
+    max-width: 60%;
+    font-size: 25px;
+}
+
+.hero-section h1 {
+    font-size: 80px;
+}
+
+.hero-section button {
+    padding: 15px 25px;
+    margin-right: 10px;
+    font-size: 18px;
+    background-color: #00cc66;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-section button:hover {
+    background-color: #008f4b;
+}
+
+.hero-section img {
+    max-width: 50%;
+    /* Increased the size */
+    height: auto;
+    margin-left: -30px;
+    /* Shifted image towards the left */
+}
+
+.features-section {
+    padding: 30px;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 40px;
+}
+
+.features-section p {
+    font-size: 18px;
+    color: grey;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.features .feature-card {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.features .feature-card:hover,
+.features .feature-card:focus {
+    background-color: #f0f0f0;
+    /* Light grey when clicked or hovered */
+}
+
+.features .feature-card img {
+    margin-bottom: 20px;
+}
+
+.features .feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.features .feature-card p {
+    margin-bottom: 20px;
+}
+
+.features .feature-card button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.features .feature-card button:hover {
+    background-color: #555;
+}
+
+.full-screen-image {
+    display: flex;
+    justify-content: center;
+    /* Horizontal alignment */
+    align-items: center;
+    /* Vertical alignment */
+    width: 100%;
+    height: 55vh;
+    /* Full screen height */
+    background-color: #ffffff;
+    /* Optional background color */
+}
+
+.full-screen-image-stand {
+    display: flex;
+    justify-content: center;
+    /* Horizontal alignment */
+    align-items: center;
+    /* Vertical alignment */
+    width: 100%;
+    height: 80vh;
+    /* Full screen height */
+    background-color: #ffffff;
+    /* Optional background color */
+}
+
+.full-screen-image-pose {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    /* Full screen height */
+    background-color: #ffffff;
+    justify-content: center;
+    /* Horizontal alignment */
+    align-items: center;
+
+}
+
+.full-screen-image img {
+    max-width: 120%;
+    /* Prevents the image from exceeding the screen width */
+    max-height: 100%;
+    /* Prevents the image from exceeding the screen height */
+    /* Ensures the image is fully visible within its container */
+}
+
+.improve-posture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffe599;
+    /* Light yellow background */
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.improve-posture h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.improve-posture button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #333;
+    /* Dark background for button */
+    color: white;
+    /* White text */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.improve-posture button:hover {
+    background-color: #555;
+    /* Slightly lighter on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge the button on hover */
+}
+
+.improve-posture button:active {
+    background-color: #000;
+    /* Darker on click */
+}
+
+.footer {
+    background-color: #333;
+    /* Dark background */
+    color: #ccc;
+    /* Light text */
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.footer-logo .triangle-logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer-logo .triangle-logo {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-logo .triangle-logo::before,
+.footer-logo .triangle-logo::after,
+.footer-logo .triangle-logo .dot {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.footer-logo .triangle-logo::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-logo .triangle-logo::after {
+    bottom: 0;
+    left: 0;
+}
+
+.footer-logo .triangle-logo .dot {
+    bottom: 0;
+    right: 0;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+}
+
+.footer-links h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+    /* Bright heading text */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    /* Light text */
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+    /* Brighten on hover */
+}

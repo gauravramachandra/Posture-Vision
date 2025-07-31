@@ -1,0 +1,41 @@
+.instructions-list {
+    width: 40%;
+    padding: 15px;
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.instructions-list:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.instruction {
+    margin: 15px;
+    letter-spacing: 0.8px;
+    color: white; /* Change text color to white */
+    font-weight: 500;
+    font-size: 1.1rem; /* Slightly larger font */
+    margin-top: 20px;
+    line-height: 1.6; /* Improve readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow */
+}
+
+.instructions-container {
+    display: flex;
+    justify-content: space-around; /* Balanced spacing */
+    align-items: center; /* Center-align items */
+    gap: 20px; /* Add spacing between elements */
+    padding: 20px;
+}
+
+.pose-demo-img {
+    height: 400px;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 123, 255, 0.5); /* Match primary color */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.pose-demo-img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
